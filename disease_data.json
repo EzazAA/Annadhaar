@@ -1,0 +1,62 @@
+[
+    {
+        "disease": "Powdery Mildew",
+        "cause": "Fungal infection due to high humidity",
+        "symptoms": "White powdery spots on leaves, stunted growth",
+        "cure": "Use neem oil spray and improve air circulation"
+    },
+    {
+        "disease": "Bacterial Wilt",
+        "cause": "Bacteria transmitted by insects",
+        "symptoms": "Sudden wilting, yellowing leaves",
+        "cure": "Remove infected plants and apply copper-based bactericides"
+    },
+    {
+        "disease": "Leaf Blight",
+        "cause": "Fungal or bacterial infection due to excess moisture",
+        "symptoms": "Brown or black spots on leaves, dry leaf edges",
+        "cure": "Use copper-based fungicides and prune affected leaves"
+    },
+    {
+        "disease": "Root Rot",
+        "cause": "Overwatering or poor drainage leading to fungal infection",
+        "symptoms": "Blackened or mushy roots, wilting leaves",
+        "cure": "Reduce watering, improve drainage, and use fungicides"
+    },
+    {
+        "disease": "Rust Disease",
+        "cause": "Fungal spores spread by wind and rain",
+        "symptoms": "Orange or brown spots on leaves, premature leaf drop",
+        "cure": "Apply sulfur-based fungicides and remove infected leaves"
+    },
+    {
+        "disease": "Anthracnose",
+        "cause": "Fungal infection due to wet conditions",
+        "symptoms": "Dark sunken lesions on leaves and fruits",
+        "cure": "Use copper-based fungicides and avoid overhead watering"
+    },
+    {
+        "disease": "Damping Off",
+        "cause": "Fungal infection affecting seedlings",
+        "symptoms": "Seedlings collapse and rot at the base",
+        "cure": "Use sterile soil, avoid overwatering, and apply fungicide"
+    },
+    {
+        "disease": "Downy Mildew",
+        "cause": "Fungal infection favored by cool, humid weather",
+        "symptoms": "Yellow patches on leaves with white mold underneath",
+        "cure": "Increase air circulation, apply copper fungicide"
+    },
+    {
+        "disease": "Septoria Leaf Spot",
+        "cause": "Fungal spores spread by rain splash",
+        "symptoms": "Small brown or gray spots with yellow halos",
+        "cure": "Use fungicide and remove infected leaves"
+    },
+    {
+        "disease": "Black Rot",
+        "cause": "Bacterial infection due to wet conditions",
+        "symptoms": "V-shaped black patches on leaves, fruit shriveling",
+        "cure": "Remove infected plants, apply copper bactericide"
+    }
+]
