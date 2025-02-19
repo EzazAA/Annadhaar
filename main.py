@@ -4,6 +4,7 @@ import faiss
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
+import os
 
 app = FastAPI()
 
@@ -45,3 +46,4 @@ def chat(symptom_query: str):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
