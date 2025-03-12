@@ -1,62 +1,62 @@
 [
-    {
-        "disease": "Powdery Mildew",
-        "cause": "Fungal infection due to high humidity",
-        "symptoms": "White powdery spots on leaves, stunted growth",
-        "cure": "Use neem oil spray and improve air circulation"
-    },
-    {
-        "disease": "Bacterial Wilt",
-        "cause": "Bacteria transmitted by insects",
-        "symptoms": "Sudden wilting, yellowing leaves",
-        "cure": "Remove infected plants and apply copper-based bactericides"
-    },
-    {
-        "disease": "Leaf Blight",
-        "cause": "Fungal or bacterial infection due to excess moisture",
-        "symptoms": "Brown or black spots on leaves, dry leaf edges",
-        "cure": "Use copper-based fungicides and prune affected leaves"
-    },
-    {
-        "disease": "Root Rot",
-        "cause": "Overwatering or poor drainage leading to fungal infection",
-        "symptoms": "Blackened or mushy roots, wilting leaves",
-        "cure": "Reduce watering, improve drainage, and use fungicides"
-    },
-    {
-        "disease": "Rust Disease",
-        "cause": "Fungal spores spread by wind and rain",
-        "symptoms": "Orange or brown spots on leaves, premature leaf drop",
-        "cure": "Apply sulfur-based fungicides and remove infected leaves"
-    },
-    {
-        "disease": "Anthracnose",
-        "cause": "Fungal infection due to wet conditions",
-        "symptoms": "Dark sunken lesions on leaves and fruits",
-        "cure": "Use copper-based fungicides and avoid overhead watering"
-    },
-    {
-        "disease": "Damping Off",
-        "cause": "Fungal infection affecting seedlings",
-        "symptoms": "Seedlings collapse and rot at the base",
-        "cure": "Use sterile soil, avoid overwatering, and apply fungicide"
-    },
-    {
-        "disease": "Downy Mildew",
-        "cause": "Fungal infection favored by cool, humid weather",
-        "symptoms": "Yellow patches on leaves with white mold underneath",
-        "cure": "Increase air circulation, apply copper fungicide"
-    },
-    {
-        "disease": "Septoria Leaf Spot",
-        "cause": "Fungal spores spread by rain splash",
-        "symptoms": "Small brown or gray spots with yellow halos",
-        "cure": "Use fungicide and remove infected leaves"
-    },
-    {
-        "disease": "Black Rot",
-        "cause": "Bacterial infection due to wet conditions",
-        "symptoms": "V-shaped black patches on leaves, fruit shriveling",
-        "cure": "Remove infected plants, apply copper bactericide"
-    }
+  {
+    "disease": "Wheat Stem Rust",
+    "cause": "Fungal infection by Puccinia graminis f. sp. tritici (including virulent races such as Ug99)",
+    "symptoms": "Red‐brown pustules on stems and leaves; severe infections lead to lodging and major yield loss",
+    "cure": "Utilize resistant cultivars, apply fungicides preemptively, and practice crop rotation"
+  },
+  {
+    "disease": "Wheat Leaf Rust",
+    "cause": "Fungal infection by Puccinia triticina",
+    "symptoms": "Small orange‐brown pustules scattered on leaves that coalesce and cause premature senescence",
+    "cure": "Apply fungicides (e.g., triazoles), adopt resistant varieties, and rotate crops"
+  },
+  {
+    "disease": "Fusarium Head Blight",
+    "cause": "Fungal infection by Fusarium graminearum",
+    "symptoms": "Bleached spikelets with pinkish mold formation; grain may be contaminated with mycotoxins",
+    "cure": "Use resistant cultivars, treat seeds and heads with appropriate fungicides, and implement crop rotation"
+  },
+  {
+    "disease": "Wheat Powdery Mildew",
+    "cause": "Fungal infection by Blumeria graminis f. sp. tritici",
+    "symptoms": "White, powdery growth covering leaves and spikes that reduces photosynthetic area",
+    "cure": "Apply sulfur‐based or systemic fungicides and improve field air circulation; select resistant lines"
+  },
+  {
+    "disease": "Rice Blast",
+    "cause": "Fungal infection by Magnaporthe oryzae",
+    "symptoms": "Diamond-shaped lesions on leaves and neck rot on panicles leading to premature ripening",
+    "cure": "Employ resistant rice varieties, apply fungicides early, and maintain strict field sanitation"
+  },
+  {
+    "disease": "Rice Bacterial Leaf Blight",
+    "cause": "Bacterial infection by Xanthomonas oryzae pv. oryzae",
+    "symptoms": "Water-soaked lesions that turn yellow and dry out on the leaf margins and midribs",
+    "cure": "Use resistant cultivars, apply copper-based bactericides, and practice proper field management"
+  },
+  {
+    "disease": "Rice Sheath Blight",
+    "cause": "Fungal infection by Rhizoctonia solani",
+    "symptoms": "Lesions on leaf sheaths near the waterline with gradual tissue blighting",
+    "cure": "Improve field drainage, use balanced fertilization and appropriate fungicide applications"
+  },
+  {
+    "disease": "Northern Corn Leaf Blight",
+    "cause": "Fungal infection by Exserohilum turcicum",
+    "symptoms": "Long, elliptical, gray-green lesions with dark margins on maize leaves",
+    "cure": "Deploy resistant hybrids, apply fungicides when conditions favor the disease, and rotate crops"
+  },
+  {
+    "disease": "Gray Leaf Spot",
+    "cause": "Fungal infection by Cercospora zeae-maydis",
+    "symptoms": "Irregular, rectangular, gray to brown lesions with yellow halos on leaves",
+    "cure": "Apply targeted fungicides, adopt resistant cultivars, and manage crop residue to reduce inoculum"
+  },
+  {
+    "disease": "Maize Anthracnose",
+    "cause": "Fungal infection by Colletotrichum graminicola",
+    "symptoms": "Dark, sunken lesions on leaves, stalks, and ears, leading to ear rot",
+    "cure": "Use resistant varieties, practice crop rotation, and apply fungicides at early disease onset"
+  }
 ]
