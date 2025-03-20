@@ -1,5 +1,4 @@
 flask
 numpy
 gdown
-pickle5
 scikit-learn
