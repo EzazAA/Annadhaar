@@ -1,5 +1,5 @@
-fastapi
-uvicorn
-gunicorn
-faiss-cpu
-sentence-transformers
+flask
+numpy
+gdown
+pickle5
+scikit-learn
