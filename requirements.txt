@@ -4,3 +4,4 @@ numpy
 gdown
 uvicorn
 scikit-learn
+sentence-transformer
