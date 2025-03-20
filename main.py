@@ -1,49 +1,47 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-import faiss
-import json
-import numpy as np
-from sentence_transformers import SentenceTransformer
 import os
+import pickle
+import gdown
+import numpy as np
+from flask import Flask, request, jsonify
+from sklearn.metrics.pairwise import cosine_similarity
 
-app = FastAPI()
+app = Flask(__name__)
 
-# Enable CORS (Important for frontend apps to access the API)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Change this to your frontend URL in production
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# Google Drive file ID for the model
+FILE_ID = "1dEqytupX4VkZVglj1EyVZvGmenBvKzf2"  # Replace with your actual Google Drive file ID
+MODEL_PATH = "disease_model.pkl"
 
-# Load dataset
-with open("disease_data.json", "r") as f:
-    diseases = json.load(f)
+# Download the model from Google Drive if not present
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    gdown.download(f"https://drive.google.com/uc?id={FILE_ID}", MODEL_PATH, quiet=False)
 
-# Load model
-model = SentenceTransformer("all-MiniLM-L6-v2")
-symptom_texts = [d["symptoms"] for d in diseases]
-symptom_embeddings = model.encode(symptom_texts)
+# Load the pre-trained model and embeddings from the .pkl file
+with open(MODEL_PATH, "rb") as f:
+    data = pickle.load(f)
 
-# Store embeddings in FAISS
-index = faiss.IndexFlatL2(symptom_embeddings.shape[1])
-index.add(np.array(symptom_embeddings))
+diseases = data["diseases"]
+model = data["model"]  # ✅ Model is already inside the pickle file!
+symptom_embeddings = data["embeddings"]  # ✅ Precomputed symptom embeddings
 
-@app.get("/chat")
-def chat(symptom_query: str):
-    query_embedding = model.encode([symptom_query])
-    _, idx = index.search(np.array(query_embedding), 1)
+@app.route("/chat", methods=["POST"])
+def chat():
+    try:
+        user_input = request.json["message"]
+        user_embedding = model.encode([user_input])  # ✅ Uses preloaded model
 
-    disease = diseases[idx[0][0]]
-    return {
-        "disease": disease["disease"],
-        "cause": disease["cause"],
-        "cure": disease["cure"]
-    }
+        # Compute similarity with precomputed symptom embeddings
+        similarities = cosine_similarity(user_embedding, symptom_embeddings)
+        best_match_idx = np.argmax(similarities)
 
-# Run with Uvicorn
+        response = {
+            "disease": diseases[best_match_idx]["name"],
+            "info": diseases[best_match_idx]["info"]
+        }
+        return jsonify(response)
+    
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    app.run(host="0.0.0.0", port=10000)
